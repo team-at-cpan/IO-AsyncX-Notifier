@@ -9,16 +9,19 @@ our $VERSION = '0.001';
 
 =head1 NAME
 
+IO::AsyncX::Notifier - easier IO::Async::Notifiers with Object::Pad
+
 =head1 SYNOPSIS
 
  use Object::Pad;
  class Example isa IO::AsyncX::Notifier {
-  use Ryu::Observable;
   # This will be populated by ->configure(example_slot => ...)
   # or ->new(example_slot => ...)
   has $example_slot;
   # This will be updated by ->configure (or ->new) in a similar fashion
+  use Ryu::Observable;
   has $observable_slot { Ryu::Observable->new };
+
   # You can have as many other slots as you want, main limitation
   # at the moment is that they have to be scalars.
 
@@ -98,3 +101,14 @@ method configure (%args) {
 }
 
 1;
+
+__END__
+
+=head1 AUTHOR
+
+Tom Molesworth C<< <TEAM@cpan.org> >>
+
+=head1 LICENSE
+
+Copyright Tom Molesworth 2021. Licensed under the same terms as Perl itself.
+
