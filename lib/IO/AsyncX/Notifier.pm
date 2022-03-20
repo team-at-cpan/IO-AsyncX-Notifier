@@ -6,7 +6,7 @@ use Object::Pad qw(:experimental);
 
 class IO::AsyncX::Notifier :isa(IO::Async::Notifier);
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 =head1 NAME
 
