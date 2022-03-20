@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-
+use 5.026;
 
 use ExtUtils::MakeMaker;
 
@@ -14,6 +14,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "IO-AsyncX-Notifier",
   "LICENSE" => "perl",
+  "MIN_PERL_VERSION" => "5.026",
   "NAME" => "IO::AsyncX::Notifier",
   "PREREQ_PM" => {
     "IO::Async::Notifier" => "0.79",
