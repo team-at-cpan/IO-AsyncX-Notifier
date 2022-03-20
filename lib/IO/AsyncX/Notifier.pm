@@ -1,7 +1,7 @@
 package IO::AsyncX::Notifier;
 # ABSTRACT: Combining IO::Async::Notifier with Object::Pad
 
-use Object::Pad;
+use Object::Pad qw(:experimental);
 
 class IO::AsyncX::Notifier :isa(IO::Async::Notifier);
 
