@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.003     2022-03-21 02:08:25+08:00 Asia/Kuala_Lumpur
     [Dependency updates]
 
     - since this requires signatures, make perl v5.26 dependency explicit - thanks to @eserte for reporting!
