@@ -9,7 +9,7 @@ use Object::Pad qw(:experimental(mop));
 class IO::AsyncX::Notifier;
 inherit IO::Async::Notifier;
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 =head1 NAME
 
@@ -21,10 +21,10 @@ IO::AsyncX::Notifier - easier IO::Async::Notifiers with Object::Pad
  class Example isa IO::AsyncX::Notifier {
   # This will be populated by ->configure(example_field => ...)
   # or ->new(example_field => ...)
-  has $example_field;
+  field $example_field;
   # This will be updated by ->configure (or ->new) in a similar fashion
   use Ryu::Observable;
-  has $observable_field { Ryu::Observable->new };
+  field $observable_field { Ryu::Observable->new };
 
   # You can have as many other fields as you want, main limitation
   # at the moment is that they have to be scalars.
