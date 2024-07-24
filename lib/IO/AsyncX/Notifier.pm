@@ -18,7 +18,9 @@ IO::AsyncX::Notifier - easier IO::Async::Notifiers with Object::Pad
 =head1 SYNOPSIS
 
  use Object::Pad;
- class Example isa IO::AsyncX::Notifier {
+ class Example {
+  inherit IO::AsyncX::Notifier;
+
   # This will be populated by ->configure(example_field => ...)
   # or ->new(example_field => ...)
   field $example_field;
