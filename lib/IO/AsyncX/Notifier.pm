@@ -49,7 +49,7 @@ L<IO::Async::Notifier> subclasses.
 
 =cut
 
-use mro qw(c3);
+use mro qw(c3); # for ->next::method
 use Syntax::Keyword::Try;
 use Scalar::Util ();
 
