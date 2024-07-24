@@ -1,10 +1,13 @@
 package IO::AsyncX::Notifier;
 # ABSTRACT: Combining IO::Async::Notifier with Object::Pad
+use strict;
+use warnings;
+use utf8;
 
-use Object::Pad;
-use Object::Pad qw(:experimental);
+use Object::Pad qw(:experimental(mop));
 
-class IO::AsyncX::Notifier :isa(IO::Async::Notifier);
+class IO::AsyncX::Notifier;
+inherit IO::Async::Notifier;
 
 our $VERSION = '0.003';
 
@@ -49,7 +52,7 @@ use Syntax::Keyword::Try;
 use Scalar::Util ();
 
 # This is a hack to defer ->configure until we have an object
-has $prepared;
+field $prepared;
 
 ADJUSTPARAMS ($args) {
     # We set this once after instantiation and never touch it again
