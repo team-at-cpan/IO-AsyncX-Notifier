@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    [Dependency updates]
+
+    - updated to latest Object::Pad module and syntax
 
 0.003     2022-03-21 02:08:25+08:00 Asia/Kuala_Lumpur
     [Dependency updates]
